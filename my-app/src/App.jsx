@@ -1,7 +1,7 @@
 import React from "react";
 import './scss/app.scss'
 import Header from "./Components/Header";
-import Categories from "./Components/Categories";
+import Categories from "./Components/Categories/Categories";
 import Sort from "./Components/Sort";
 import PizzaBlock from "./Components/PizzaBlock";
 
@@ -17,15 +17,6 @@ function App() {
                     </div>
                     <h2 className="content__title">Все пиццы</h2>
                     <div className="content__items">
-                        <PizzaBlock/>
-                        <PizzaBlock/>
-                        <PizzaBlock/>
-                        <PizzaBlock/>
-                        <PizzaBlock/>
-                        <PizzaBlock/>
-                        <PizzaBlock/>
-                        <PizzaBlock/>
-                        <PizzaBlock/>
                         <PizzaBlock/>
                         <PizzaBlock/>
                     </div>
