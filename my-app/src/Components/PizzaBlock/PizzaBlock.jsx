@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 
 
 const PizzaBlock = ({title, price, sizes, types, imageUrl}) => {
-    const [addPizza, setAddPizza] =useState(0)
+    const [addPizza, setAddPizza] = useState(0)
     const add = () => {
         setAddPizza(addPizza + 1)
     }
     const [isActive, setIsActive] = useState(0)
     const [isActiveSm, setIsActiveSm] = useState(0)
-    const item = ['тонкое', 'традиционное']
+    const item = ['тонке', 'традиційне']
 
 
     return (
@@ -44,7 +44,7 @@ const PizzaBlock = ({title, price, sizes, types, imageUrl}) => {
                 </ul>
             </div>
             <div className="pizza-block__bottom">
-                <div className="pizza-block__price">от {price} ₽</div>
+                <div className="pizza-block__price">от {price} ₴</div>
                 <button onClick={add} className="button button--outline button--add">
                     <svg
                         width="12"
@@ -58,7 +58,7 @@ const PizzaBlock = ({title, price, sizes, types, imageUrl}) => {
                             fill="white"
                         />
                     </svg>
-                    <span>Добавить</span>
+                    <span>Додати</span>
                     <i>{addPizza}</i>
                 </button>
             </div>

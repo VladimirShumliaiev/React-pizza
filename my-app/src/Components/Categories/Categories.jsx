@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 const Categories = () => {
     const [activeIndex, setActiveIndex] = useState(0)
-    const categoriesList = ['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые']
+    const categoriesList = ["Всі", "М'ясні","Вегетаріанська", "Гриль", "Гострі", "Закриті"]
 
     return (
         <div className="categories">
