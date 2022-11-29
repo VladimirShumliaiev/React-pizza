@@ -3,7 +3,8 @@ import './scss/app.scss'
 import Header from "./Components/Header";
 import Categories from "./Components/Categories/Categories";
 import Sort from "./Components/Sort";
-import PizzaBlock from "./Components/PizzaBlock";
+import PizzaBlock from "./Components/PizzaBlock/PizzaBlock";
+import pizzas from './assets/pizza.json'
 
 function App() {
     return (
@@ -17,8 +18,16 @@ function App() {
                     </div>
                     <h2 className="content__title">Все пиццы</h2>
                     <div className="content__items">
-                        <PizzaBlock/>
-                        <PizzaBlock/>
+                        {
+                            pizzas.map(obj =>
+                                <PizzaBlock key={obj.id}
+                                    imageUrl={obj.imageUrl}
+                                    title={obj.name}
+                                    price={obj.price}
+                                    sizes={obj.sizes}
+                                    types={obj.types}
+                                />)
+                        }
                     </div>
                 </div>
             </div>

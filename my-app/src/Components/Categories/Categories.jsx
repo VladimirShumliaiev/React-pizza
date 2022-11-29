@@ -8,7 +8,10 @@ const Categories = () => {
         <div className="categories">
             <ul>
                 {
-                    categoriesList.map((e,index) => <li onClick={() => setActiveIndex(index)} className={activeIndex === index ? 'active' : ''}>{e}</li>)
+                    categoriesList.map((e, index) =>
+                        <li key={e} onClick={() => setActiveIndex(index)} className={activeIndex === index ? 'active' : ''}>
+                            {e}
+                        </li>)
                 }
             </ul>
         </div>
