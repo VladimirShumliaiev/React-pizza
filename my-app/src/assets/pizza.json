@@ -2,7 +2,7 @@
     {
       "id": 0,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
-      "name": "Пепероні Фреш з перцем",
+      "name": "Пепероні Фреш з перцем ",
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 803,
@@ -72,7 +72,7 @@
     {
       "id": 7,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d48003cd-902c-420d-9f28-92d9dc5f73b4.jpg",
-      "name": "Маргарита",
+      "name": "Маргарита ",
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 450,
