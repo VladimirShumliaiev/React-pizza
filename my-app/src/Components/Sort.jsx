@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 
 const Sort = () => {
-    const [open, setOpen] = useState(false)
-    const [select, setSelect] = useState(0)
-
     const list = ['популярності', 'ціні', 'алфавіту']
+    const [select, setSelect] = useState(0)
+    const [open, setOpen] = useState(false)
+
+
     const onClickVariants = (e) => {
         setSelect(e)
         setOpen(false)
-
     }
 
 
@@ -31,19 +31,14 @@ const Sort = () => {
                 <span onClick={() => setOpen(!open)}>{list[select]}</span>
             </div>
             {open && (
-                <div className="sort__popup">
-
-                    <ul>
+                    <div className="sort__popup">
+                        <ul>
                         {
-                            list.map((e, i) =>
-                                <li
-                                    key={e}
-                                    onClick={() => onClickVariants(i)}
-                                    className={select === i ? 'active' : ''}>{e}
-                                </li>)
+                            list.map((e, i) => <li onClick={() => onClickVariants(i)}
+                                                   className={select === i ? 'active' : ''}>{e}</li>)
                         }
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
             )}
         </div>
     );
