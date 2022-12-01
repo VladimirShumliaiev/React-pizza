@@ -1,9 +1,11 @@
 import React from "react";
 import './scss/app.scss'
 import Header from "./Components/Header";
-import Categories from "./Components/Categories/Categories";
-import Sort from "./Components/Sort";
-import PizzaBlockCell from "./Components/PizzaBlock/PizzaBlockCell";
+import Home from "./Page/Home";
+import NotFound from "./Page/NotFound";
+import {Route, Routes} from "react-router-dom";
+import Cart from "./Page/Cart";
+
 
 function App() {
     return (
@@ -11,14 +13,11 @@ function App() {
             <Header/>
             <div className="content">
                 <div className="container">
-                    <div className="content__top">
-                        <Categories/>
-                        <Sort/>
-                    </div>
-                    <h2 className="content__title">Усі піци</h2>
-                    <div className="content__items">
-                       <PizzaBlockCell/>
-                    </div>
+                    <Routes>
+                        <Route path={'/'} element={<Home/>}/>
+                        <Route path={'/Cart'} element={<Cart/>}/>
+                        <Route path={'*'} element={<NotFound/>}/>
+                    </Routes>
                 </div>
             </div>
         </div>);

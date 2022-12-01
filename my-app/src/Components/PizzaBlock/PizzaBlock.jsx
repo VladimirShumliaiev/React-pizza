@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-const PizzaBlock = ({title, price, sizes, types, imageUrl}) => {
+const PizzaBlock = ({name, price, sizes, types, imageUrl}) => {
     const [addPizza, setAddPizza] = useState(0)
     const add = () => {
         setAddPizza(addPizza + 1)
@@ -18,7 +18,7 @@ const PizzaBlock = ({title, price, sizes, types, imageUrl}) => {
                 src={imageUrl}
                 alt="Pizza"
             />
-            <h4 className="pizza-block__title">{title}</h4>
+            <h4 className="pizza-block__title">{name}</h4>
             <div className="pizza-block__selector">
                 <ul>
                     {
